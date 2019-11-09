@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.container{
+  margin-left: 100px;
+}
+
+.mastercontainer{
+  display: flex;
+}

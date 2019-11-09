@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../CSS/reset.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <title>jquery</title>
+</head>
+
+<body>
+  <!-- タイピング風アニメーション -->
+  <div class="scrsty">
+    <span id="typ">&lt;
+      <span class="blue">script&nbsp;</span>
+      <span class="mizuiro">src</span>=
+      <span class="orange">"app.js"</span>&gt;&lt;<span class="blue">/script</span>&gt;</span>
+  </div>
+  <div class="none">
+    <header>
+      <a href="#"><img src="../img/jquery-logo-png--800.gif" alt="jQuery"></a>
+      <span class="kuninaka">jqreference</span>
+    </header>
+
+
+    <!-- 全体を囲むタグ -->
+    <div class="mcontainer">
+      <!-- メインを右と左に分ける要素 -->
+      <div class="maincontainer">
+
+        <main class="setting">
+          <div class="top gaptop">
+            <img src="../img/jquery-e1559694874904.webp" alt="jquery">
+            <h1>jQueryの基礎知識</h1>
+            <p>このサイトではjQueryの抑えておきたいポイントや基礎知識をまとめてみました。
+              そもそもjQueryとはJavaScriptのライブラリで最も使われているライブラリで、
+              導入することでJavaScriptをより簡単に記述することが可能です。
+              それでは、以下のページで詳しく書いていきます
+            </p>
+            <p>※以下のページで、文字の下に<span class="setumei">赤いライン</span> が入っていればクリックすることでその場でその用語を調べることができます。</p>
+          </div>
+
+          <div class="introduction gaptop">
+            <!-- 導入 -->
+            <h2 id="target1">jQuery導入方法</h2>
+            <p>jQueryの導入方法は２通りあります<br>１つ目は<span class="red">jQueryファイルをダウンロードする</span>方法で、<br>２つ目は<span
+                class="green">CDNを利用する</span>方法です。</p>
+            <h3 id="target2">1.jQueryファイルのダウンロード</h3>
+            <p>jQuery公式サイトからファイルをダウンロードし、ダウンロードしたファイルをブラウザに読み込ませて使う方法です。<br></p>
+            公式サイトURL<a href="http://jquery.com/download/">jQuery公式ページ</a>
+            <h3 id="target3">2.CDNを利用する</h3>
+            <p>Googleなどが<span id="mordal" class="setumei">CDN</span>で提供しているjQueryファイルを読み込む方法です。</p>
+            <h3>3.注意点</h3>
+            <p>読み込む順番を間違えないこと。<br>
+              例えば、jQueryのファイルをダウンロードして利用する際に、ダウンロードしたファイルよりも先に自分で記述したjsファイルを読み込んでしまうと正常に動作しないことがある。<br>
+              また、CDNも同様で、参照したいjQueryファイルよりも先に自分で記述したファイルを読み込むこともNG
+            </p>
+          </div>
+          <div class="gaptop grammar">
+            <!-- 基本文法 -->
+            <h2 id="target4">基本文法</h2>
+            <p>基本文法としては以下のようになります</p>
+            <p class="grammarexample">
+              <span class="exwhite">$(</span>
+              <span class="red">”セレクタ”</span>
+              <span class="exwhite">).メソッド();</span>
+            </p>
+            <p>以下でセレクタとメソッドについて詳しく書いていきます</p>
+            <h3 id="target5">1.セレクタ</h3>
+            <p>セレクタの中身は、取得したい要素の
+              <span class="green">タグ名</span>か
+              <span class="green">class名</span>か
+              <span class="green">id名</span>を記述
+            </p>
+            これを書くことによって要素の始まりから終わりまでを取得可能
+            <p>タグ名ならばそのまま記述</p>
+            <p class="grammarexample">
+              <span class="exwhite">$(</span>
+              <span class="red">”セレクタ”</span>
+              <span class="exwhite">).メソッド();</span>
+            </p>
+            <p>class名ならば「.」を前につけて記述</p>
+            <p class="grammarexample">
+              <span class="exwhite">$(</span>
+              <span class="red">”.セレクタ”</span>
+              <span class="exwhite">).メソッド();</span>
+            </p>
+            <p>id名ならば「#」を前につけて記述</p>
+            <p class="grammarexample">
+              <span class="exwhite">$(</span>
+              <span class="red">”#セレクタ”</span>
+              <span class="exwhite">)メソッド();</span>
+            </p>
+            <h3 id="target6">2.メソッド</h3>
+            <p>メソッドは命令文の意味で、ここに書く内容で、取得してきた要素をどうするか命令することができます</p>
+            <p>メソッドは多数存在するため、以下のサイト等を参照するか自分で調べてみてください</p>
+            <p><a href="https://javascript.programmer-reference.com/jquery-list-method/"></a></p>
+          </div>
+        </main>
+
+
+
+        <aside class="setting aside">
+          <h4>目次</h4>
+          <div class="asidebox">
+            <div>
+              <p id="cursor1" class="redtag">導入方法</p>
+              <p id="cursor2" class="bluetag">1.ダウンロード</p>
+              <p id="cursor3" class="bluetag">2.CDN</p>
+            </div>
+            <div>
+              <p id="cursor4" class="redtag">基本文法</p>
+              <p id="cursor5" class="bluetag">1.セレクタ</p>
+              <p id="cursor6" class="bluetag">2.メソッド</p>
+            </div>
+          </div>
+          </aside>
+      </div>
+    </div>
+    <footer>
+      <span>kuninaka.com</span>
+    </footer>
+  </div>
+
+  <!-- t.jsの読み込み(download) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../JS/t.min.js"></script>
+  <!-- js自分のコードの読み込み -->
+  <script src="../JS/app.js"></script>
+</body>
+
+</html>
