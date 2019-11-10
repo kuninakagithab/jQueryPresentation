@@ -21,7 +21,7 @@
   <div class="none">
     <header>
       <a href="#"><img src="img/jquery-logo-png--800.gif" alt="jQuery"></a>
-      <span class="kuninaka">jqreference</span>
+      <a href="https://uxmilk.jp/11074">参考サイト</a>
     </header>
 
 
@@ -50,8 +50,22 @@
             <h3 id="target2">1.jQueryファイルのダウンロード</h3>
             <p>jQuery公式サイトからファイルをダウンロードし、ダウンロードしたファイルをブラウザに読み込ませて使う方法です。<br></p>
             公式サイトURL<a href="http://jquery.com/download/">jQuery公式ページ</a>
+
+
             <h3 id="target3">2.CDNを利用する</h3>
-            <p>Googleなどが<span id="mordal" class="setumei">CDN</span>で提供しているjQueryファイルを読み込む方法です。</p>
+            <p>Googleなどが<span id="cdn" class="js-modal-open setumei">CDN</span>で提供しているjQueryファイルを読み込む方法です。</p>
+            <div class="modal js-modal">
+                <div class="modal-bg js-modal-close"></div>
+                <div class="modal-content">
+                    <p>CDNとは、コンテンツデリバリネットワーク（Content Delivery Network）の略で、世界中に張り巡らされたCDN専用の配信ネットワーク（CDNプラットフォーム）を利用して、Webサイトにアクセスしようとするエンドユーザに最も近いPoP（配信拠点）から効率的かつ高速にWebを配信する仕組みです。</p>
+                    <a class="js-modal-close" href="">閉じる</a>
+                </div><!--modal__inner-->
+            </div><!--modal-->
+
+
+
+
+
             <h3>3.注意点</h3>
             <p>読み込む順番を間違えないこと。<br>
               例えば、jQueryのファイルをダウンロードして利用する際に、ダウンロードしたファイルよりも先に自分で記述したjsファイルを読み込んでしまうと正常に動作しないことがある。<br>
@@ -116,7 +130,7 @@
               <p id="cursor6" class="bluetag">2.メソッド</p>
             </div>
           </div>
-          </aside>
+        </aside>
       </div>
     </div>
     <footer>

@@ -24,6 +24,20 @@ $(function () {
     $(".none").removeClass("none")
   }, 12000);
 
+///////////////////////////////////////////
+  $('.js-modal-open').on('click',function(){
+    $("aside").addClass("none");
+      $('.js-modal').fadeIn();
+      return false;
+  });
+  $('.js-modal-close').on('click',function(){
+    $("aside").removeClass("none").fadeIn(2000);
+      $('.js-modal').fadeOut();
+      return false;
+  });
+
+////////////////////////////////////////////
+
 
   $("#cursor1").on("click", function () {
     let target1 = $("#target1").offset().top;
@@ -57,18 +71,3 @@ $(function () {
   });
 });
 
-
-
-// // Q7
-//   // ボタンをクリックしたら
-//   // 画面の先頭に戻る
-//   $(".js-scroll").on("click", function() {
-//     // 画面の先頭に戻る
-//     // animate({実行すること}, 何秒使うか))
-// ​
-//     /* console.log($("#toggle").offset().top); */
-//     let target = $(".js-toggle").offset().top;
-// ​
-//     $("html, body").animate({ scrollTop: target }, 500);
-//   });
-// ​
