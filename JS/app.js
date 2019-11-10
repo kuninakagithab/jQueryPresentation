@@ -1,6 +1,6 @@
 $(function () {
 
-  $("#typ").t({
+  $("#typ").t({            //()のなかにタイピング風にしたい要素を取ってくる
     speed: 10,             //テキストがタイプされるスピードを指定できます。数値が低いほど速くなります。
     speed_vary: true,      //値を「true」にすると、まるで人間が入力しているかのように、タイプされる文字ごとにスピードにばらつきが出ます
     delay: 1,              //タイプを開始する時間をずらすことができます。値はmsで指定します。
@@ -10,21 +10,56 @@ $(function () {
     repeat: false,         //リピートの回数を数字で指定します。値に「true」を指定すると、無限にリピートします。
   });
   //時限装置
-  $('.scrsty').delay(12000).queue(function (next) {
+  $('.scrsty').delay(8000).queue(function (next) {
     $(this).remove();
-    next();
+    // next();
   });
+
   //クリックしても消える処理
   $('.scrsty').on("click", function () {
     $(this).remove();
-    $(".none").removeClass("none")
+    $(".none").removeClass("none");
+    $(".mcontainer").addClass("none");
+    $(".jisakukannsuu").addClass("none");
+    $(".mcontainer").removeClass("none");
   });
 
   setTimeout(function () {
     $(".none").removeClass("none")
-  }, 12000);
+    $(".mcontainer").addClass("none");
+    $(".jisakukannsuu").addClass("none");
+    $(".mcontainer").removeClass("none");
+  }, 7000);
 
-///////////////////////////////////////////
+  $("#kiso").on("click",function(){
+    $(".mcontainer").addClass("none");
+    $(".jisakukannsuu").addClass("none");
+    $(".mcontainer").removeClass("none");
+  });
+
+  $("#jisaku").on("click",function(){
+    $(".mcontainer").addClass("none");
+    $(".jisakukannsuu").addClass("none");
+    $(".jisakukannsuu").removeClass("none");
+  });
+
+  $("#kiso").removeClass("yy");
+  $("#kiso").addClass("yy");
+
+  $("#jisaku").on("click",function(){
+    $("#kiso").removeClass("yy");
+    $(this).addClass("yy");
+  });
+
+  $("#kiso").on("click",function(){
+    $("#jisaku").removeClass("yy");
+    $(this).addClass("yy");
+  });
+
+
+
+
+//モーダル
   $('.js-modal-open').on('click',function(){
     $("aside").addClass("none");
       $('.js-modal').fadeIn();
@@ -37,7 +72,7 @@ $(function () {
   });
 
 ////////////////////////////////////////////
-
+//スムーススクロール
 
   $("#cursor1").on("click", function () {
     let target1 = $("#target1").offset().top;
@@ -70,4 +105,5 @@ $(function () {
     $("html, body").animate({ scrollTop: target6 }, 500);
   });
 });
+
 

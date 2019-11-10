@@ -2,7 +2,7 @@
 /* 最初のタイピング画面 */
 .scrsty {
   height: 100vh;
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,9 +21,11 @@
 .mizuiro {
   color: rgb(0, 208, 255);
 }
+/* タイピング風終わり */
+
 
 /* メインページ */
-
+/* ヘッダー */
 header {
   height: 80px;
   background-color: white;
@@ -44,9 +46,40 @@ header img {
   width: 80px;
 }
 
+.headerleft{
+  display: flex;
+}
+
+header span{
+  line-height: 80px;
+  color: rgb(255, 162, 49);
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.h2{
+  width: 80%;
+  margin: 0 auto;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.h2 a{
+  color: red;
+  margin-left: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.yy{
+  background-color: rgb(232, 232, 232);
+}
+
+/* メイン */
+
 .mcontainer {
   background-color: rgb(232, 232, 232);
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .maincontainer {
@@ -58,6 +91,7 @@ header img {
 main {
   width: 70%;
   margin-right: 5%;
+  padding: 50px;
 }
 
 
@@ -67,7 +101,7 @@ main {
 
 aside {
   width: 25%;
-  height: 200px;
+  height: 215px;
   position: sticky;
   top: 0;
   z-index: 0.1;
@@ -90,11 +124,7 @@ aside {
 
 .top img {
   width: 100%;
-}
-
-
-main {
-  padding: 50px 50px;
+  margin-top: 20px;
 }
 
 h1 {
@@ -158,13 +188,11 @@ h4{
   padding-left: 30px;
 }
 
-
-
 .redtag{
   border-left: 3px solid rgb(255, 140, 119);
   line-height: 20px;
   border-radius: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   cursor: pointer;
 }
 
@@ -172,11 +200,10 @@ h4{
   border-left: 3px solid rgb(92, 157, 255);
   line-height: 20px;
   border-radius: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-left: 20px;
   cursor: pointer;
 }
-
 
 footer{
   background-color: rgb(12, 14, 70);
@@ -189,6 +216,8 @@ footer{
   margin: 0 auto;
   padding: 40px;
 }
+
+/* モーダル */
 .modal{
   display: none;
   height: 100vh;
@@ -212,7 +241,19 @@ footer{
   transform: translate(-70%,-50%);
   width: 60%;
 }
+/* 自作関数 */
+.jisakukannsuu{
+  width: 100%;
+  background-color: rgb(232, 232, 232);
+  margin: 0 auto;
+}
 
+.kannsu{
+  margin-top: 25px;
+}
+
+
+/* レスポンシブ対応 */
 @media screen and (max-width: 1025px) {
   aside{
     display: none;
@@ -229,6 +270,12 @@ footer{
 
   .scrsty{
     display: none;
+  }
+
+  .h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 }
 

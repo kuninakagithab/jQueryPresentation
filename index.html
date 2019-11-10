@@ -20,9 +20,16 @@
   </div>
   <div class="none">
     <header>
-      <a href="#"><img src="img/jquery-logo-png--800.gif" alt="jQuery"></a>
+      <div class="headerleft">
+        <a href="#"><img src="img/jquery-logo-png--800.gif" alt="jQuery"></a>
+        <span>jQueryが学べるサイト</span>
+      </div>
       <a href="https://uxmilk.jp/11074">参考サイト</a>
     </header>
+    <div class="h2">
+      <a id="kiso" class="new kiso">基礎知識</a>
+      <a id="jisaku" class="new jisaku">自作関数</a>
+    </div>
 
 
     <!-- 全体を囲むタグ -->
@@ -55,12 +62,16 @@
             <h3 id="target3">2.CDNを利用する</h3>
             <p>Googleなどが<span id="cdn" class="js-modal-open setumei">CDN</span>で提供しているjQueryファイルを読み込む方法です。</p>
             <div class="modal js-modal">
-                <div class="modal-bg js-modal-close"></div>
-                <div class="modal-content">
-                    <p>CDNとは、コンテンツデリバリネットワーク（Content Delivery Network）の略で、世界中に張り巡らされたCDN専用の配信ネットワーク（CDNプラットフォーム）を利用して、Webサイトにアクセスしようとするエンドユーザに最も近いPoP（配信拠点）から効率的かつ高速にWebを配信する仕組みです。</p>
-                    <a class="js-modal-close" href="">閉じる</a>
-                </div><!--modal__inner-->
-            </div><!--modal-->
+              <div class="modal-bg js-modal-close"></div>
+              <div class="modal-content">
+                <p>CDNとは、コンテンツデリバリネットワーク（Content Delivery
+                  Network）の略で、世界中に張り巡らされたCDN専用の配信ネットワーク（CDNプラットフォーム）を利用して、Webサイトにアクセスしようとするエンドユーザに最も近いPoP（配信拠点）から効率的かつ高速にWebを配信する仕組みです。
+                </p>
+                <a class="js-modal-close" href="">閉じる</a>
+              </div>
+              <!--modal__inner-->
+            </div>
+            <!--modal-->
 
 
 
@@ -132,10 +143,40 @@
           </div>
         </aside>
       </div>
+      <footer>
+        <span>kuninaka.com</span>
+      </footer>
     </div>
-    <footer>
-      <span>kuninaka.com</span>
-    </footer>
+
+    <!-- jisakukannsuu -->
+    <div class="jisakukannsuu">
+      <div class="maincontainer">
+        <div class="kannsu">
+          <main class="setting">
+            <div class="top gaptop">
+              <img src="/img/自作関数.png" alt="jquery">
+              <h1>自作関数とは</h1>
+              <p>
+                自作関数の知識を得る前に、jQueryには、自作関数と組み込み関数の２種類があることをおさえておきたい。<br>組込関数は、もともとjQUeryに組込まれている関数のことで、<br>代表例として、on.("イベント名",セレクタ,
+                データ ,関数)<br>がある<br>それに対して、自作関数は、自分で関数を作ることができ、小さなライプラリのような形で使い回すことが可能である。<br>それでは実際に自作関数を作ってみよう。
+              </p>
+            </div>
+            <div class="introduction gaptop">
+              <!-- 導入 -->
+              <h2 id="target1">自作関数の基本</h2>
+              <p>自作関数は次のような形で記述する</p>
+              <img src="./img/自作関数.png" alt="">
+              <p>
+                関数名は変数名と同じようにある程度自由に付けれますが、ルールがあります。<br>英字や_や$から始まる事。予約語は禁止。<br>予約語とは一部のJavascriptの命令語で使われているため、使われるとややこしくなるので禁止されています。
+              </p>
+              <div>以下作成中。更新あるまでお待ちください</div>
+          </main>
+        </div>
+      </div>
+      <footer>
+        <span>kuninaka.com</span>
+      </footer>
+    </div>
   </div>
 
   <!-- t.jsの読み込み(download) -->
